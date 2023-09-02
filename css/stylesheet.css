@@ -1,0 +1,535 @@
+/* Font-face definitions */
+@font-face {
+    font-family: 'Klinic Slab Bold';
+    src: url(fonts/KlinicSlabBold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klinic Slab Book';
+    src: url(fonts/KlinicSlabBook.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klinic Slab Medium Italic';
+    src: url(fonts/KlinicSlabMediumIt.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* General styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Klinic Slab Book', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke; /* Set background color for the page */
+}
+
+h1 {
+    font-family: 'Klinic Slab Bold', 'Times New Roman', Times, serif;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Klinic Slab Medium Italic', 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color: #CF1C44; /* Marinara Red */
+}
+
+p {
+    font-size: 12pt;
+}
+
+/* Colors */
+.leafygreen {
+    color: #0B9446; /* leafygreen */
+}
+
+.marinara-red {
+    color: #CF1C44; /* marinara-red */
+}
+
+.cannoli {
+    color: #D8C6B8; /*Cannoli */
+}
+
+.wine {
+    color: #5e1211; /* Wine */
+}
+
+/* Layout */
+nav {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+.logo {
+    height: 100%;
+    background-color: white; /* Reverted to the previous leafy green color */
+    height: 60px; /* Navbar height */
+    padding: 10px;
+}
+
+.logo > img {
+    height: 120%;
+    width: auto;
+    display: block;
+}
+
+.menu {
+    flex: 1; /* Make the navigation links expand and fill the space */
+    background-color: #0B9446; /* Reverted to the previous leafy green color */
+    height: 60px; /* Navbar height */
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Evenly space the navigation links */
+    align-items: center; /* Center the links vertically within the navbar */
+    height: 100%; /* Make the navigation links fill the height of the navbar */
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff; /* Set the color of the navigation links to white */
+    font-family: 'Klinic Slab Book', 'Times New Roman', Times, serif; 
+    font-weight: bold;
+    font-size: 20px; 
+    text-shadow: 2px 2px 2px #000; /* Add a white text shadow or outline for better visibility */
+}
+
+/* Dominant Photo */
+.dominant-photo {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dominant-photo img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 5px solid #5e1211; /* Wine */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Quote Card */
+.quote-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Add space between the quote card and the buttons */
+}
+
+.quote-card h2 {
+    font-size: 30px;
+    padding: 15px;
+    color: whitesmoke; 
+    background-color: #CF1C44;
+    font-family: 'Klinic Slab Bold', 'Times New Roman', Times, serif;
+}
+
+.quote-card p {
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+    font-family: 'Klinic Slab Book', 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+/* Call to Action */
+.call-to-action {
+    text-align: center; /* Center the buttons horizontally */
+}
+
+.action-button {
+    background-color: #5e1211; /* Wine color for the button */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px; /* Add space between buttons */
+    width: 100%; /* Make the buttons fill the available width */
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color to white */
+    display: block; /* Make the buttons a block element */
+    padding: 10px 20px; /* Add padding to the buttons for better appearance */
+    cursor: pointer;
+    font-weight: bold;}
+
+
+
+
+
+/* Carousel */
+.carousel {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #D8C6B8; /* Cannoli as the background color for the carousel */
+    padding: 10px; /* Add padding around the images */
+    border: 5px solid #fff; /* Marinara Red as the border color for the carousel */
+}
+
+.carousel-card {
+    width: 30%; /* width of the image card */
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 200px; /* Set a fixed height for all images, adjust as needed */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border: 5px solid #fff; /* Wine as the border color for dominant item images */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-summary {
+    font-size: 18px;
+    font-family: 'Klinic Slab Book', 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.carousel-price {
+    font-size: 20px;
+    color: #CF1C44; /* Marinara Red */
+    font-family: 'Klinic Slab Bold', 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.action-button {
+    background-color: #5e1211; /* Wine color for the button */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%; /* Make the buttons fill the available width */
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color to white */
+    display: block; /* Make the buttons a block element */
+    padding: 10px; /* Add padding to the buttons for better appearance */
+}
+
+/* Contact Section Styles */
+.contact-container {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #D8C6B8; /*Cannoli */
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 5px;
+}
+
+/* Join Our Team and Contact Us Cards Container Styles */
+.join-contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Increased margin for even spacing */
+}
+
+/* Join Our Team Stylized Card */
+.join-our-team {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px; /* Increased padding for more height */
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.join-our-team > img {
+    width: auto;
+    max-height: 400px;
+    margin-bottom: 5px;
+}
+
+/* Contact Us Stylized Card */
+.contact-us {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px; /* Increased padding for more height */
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+/* Form Styling */
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label,
+.contact-form select,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    margin: 10px 0;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form select,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #E73B3B; /* Marinara red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Card Header Styling */
+.card-header {
+    background-color: #8A133F; /* Wine color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 2%;
+}
+
+.contact-us h2 {
+    font-size: 24px;
+    background-color: #8A133F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+/* Rewards Section Styles */
+.rewards-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 5px auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.rewards-section h2 {
+    font-size: 24px;
+    background-color: #8A133F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+/* JOIN REWARDS Button Styles */
+.join-rewards-button {
+    background-color: #CC0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+/* Location and Social Media Section Styles */
+.location-social-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Location Card Styles */
+.location-card,
+.social-media-card {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+.location-card h3,
+.social-media-card h3 {
+    font-size: 24px;
+    background-color: #8A133F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+/* Social Media Card Styles */
+.social-media-card {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-card h2 {
+    font-size: 24px;
+    background-color: #8A133F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+}
+
+/* Social Media Icons Styles */
+.social-media-card a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media-card img {
+    max-width: 30px;
+    height: auto;
+}
+
+
+
+/* Dominant Item Section Styles */
+.dominant-item {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dominant-item img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border: 5px solid #5e1211; /* Wine */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.dominant-item h2 {
+    font-size: 24px;
+}
+
+.dominant-item p {
+    font-size: 18px;
+}
+
+/* Menu Items Section Styles */
+.menu-items {
+    width: 80%; 
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next row when they reach the maximum width */
+    justify-content: space-between; /* Add space between menu cards */
+}
+
+.menu-card {
+    width: 30%; /* Adjust the width of each menu card */
+    background-color: #D8C6B8;
+    border: 5px solid #CF1C44; 
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px; /* Add space between rows */
+}
+
+.view-button,
+.order-button {
+    display: inline-block;
+    background-color: #CF1C44;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.view-button {
+    background-color: #5e1211; /* Change the background color for view button */
+}
+
+.view-button:hover,
+.order-button:hover {
+    background-color: #991C44; /* Darker color on hover for both buttons */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0B9446; /* Pasta-Amore-1-hex color */
+    color: #fff; /* Set font color to white for better visibility */
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
